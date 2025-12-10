@@ -1,0 +1,17 @@
+[project]
+name = "ai-stack-compare"
+version = "0.1.0"
+description = "The same grounded-QA task in plain code, LangChain, LangGraph and CrewAI, on a local model"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27",
+    "chromadb>=0.5",
+    "sentence-transformers>=3.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["stack*"]
