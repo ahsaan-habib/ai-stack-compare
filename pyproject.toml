@@ -12,6 +12,8 @@ dependencies = [
 [project.optional-dependencies]
 langchain = ["langchain-core>=0.3", "langchain-ollama>=0.2"]
 langgraph = ["langgraph>=0.2", "langchain-ollama>=0.2"]
+crewai = ["crewai>=0.80"]
+all = ["langchain-core>=0.3", "langchain-ollama>=0.2", "langgraph>=0.2", "crewai>=0.80"]
 
 [build-system]
 requires = ["setuptools>=68"]
