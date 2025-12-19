@@ -1,0 +1,11 @@
+{"id": "q1", "question": "How do I stop a global scope applying to one query?", "answerable": true}
+{"id": "q2", "question": "How can I include soft deleted models in query results?", "answerable": true}
+{"id": "q3", "question": "How do I count a relationship's records without loading them?", "answerable": true}
+{"id": "q4", "question": "How do I make a route parameter only match numbers?", "answerable": true}
+{"id": "q5", "question": "How do I stop validating an attribute after its first failing rule?", "answerable": true}
+{"id": "q6", "question": "How do I prevent two instances of the same queued job running at once?", "answerable": true}
+{"id": "q7", "question": "How do I run a scheduled task on only one server?", "answerable": true}
+{"id": "q8", "question": "What is the cache method for retrieving an item or storing a default if it is missing?", "answerable": true}
+{"id": "n1", "question": "What is the default TTL of Laravel's route model binding cache?", "answerable": false}
+{"id": "n2", "question": "How do I shard an Eloquent model across databases with the built-in sharding API?", "answerable": false}
+{"id": "n3", "question": "Which config key sets the global retry limit for every failed job?", "answerable": false}
