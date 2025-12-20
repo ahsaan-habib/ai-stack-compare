@@ -31,6 +31,10 @@ class CountingProxy:
         proxy = self
 
         class Handler(BaseHTTPRequestHandler):
+            # chunked responses are only valid on 1.1; on the 1.0 default the
+            # chunk sizes ended up inside the JSON the frameworks parsed
+            protocol_version = "HTTP/1.1"
+
             def log_message(self, *a):  # quiet
                 pass
 
