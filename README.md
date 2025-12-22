@@ -1,7 +1,7 @@
 # ai-stack-compare
 
 The same small task built four ways — no framework, LangChain, LangGraph,
-CrewAI — on the same local model (`qwen3:4b` via Ollama) and the same
+CrewAI — on the same local model (`qwen3:4b-instruct` via Ollama) and the same
 retrieval, then measured side by side.
 
 The task: answer a Laravel docs question in a few sentences with inline
