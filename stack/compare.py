@@ -77,7 +77,10 @@ def main() -> None:
             "errors": len(per) - len(ok),
         })
 
+    if not rows:
+        raise SystemExit("nothing ran: no implementation could be imported")
     out = Path("results") / f"compare-{datetime.now():%Y%m%d-%H%M}.csv"
+    out.parent.mkdir(exist_ok=True)
     with out.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()

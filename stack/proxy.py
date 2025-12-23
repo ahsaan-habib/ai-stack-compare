@@ -52,9 +52,11 @@ class CountingProxy:
                     for chunk in r.iter_bytes():
                         tail = (tail + chunk)[-8192:]   # usage stats live in the last line/object
                         self.wfile.write(f"{len(chunk):x}\r\n".encode() + chunk + b"\r\n")
+                    # count before the terminating chunk: the caller can't see the end of
+                    # the response (and reset the counters) until this call is recorded
+                    if is_llm:
+                        proxy._record(tail)
                     self.wfile.write(b"0\r\n\r\n")
-                if is_llm:
-                    proxy._record(tail)
 
             def do_POST(self):
                 self._forward("POST")
