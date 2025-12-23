@@ -1,4 +1,4 @@
-.PHONY: install corpus index compare
+.PHONY: install corpus index compare test
 
 install:
 	python -m venv .venv && .venv/bin/pip install -e '.[all]'
@@ -11,3 +11,6 @@ index:
 
 compare:
 	python -m stack.compare
+
+test:
+	pytest -q

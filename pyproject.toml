@@ -10,6 +10,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+test = ["pytest>=8"]
 langchain = ["langchain-core>=0.3", "langchain-ollama>=0.2"]
 langgraph = ["langgraph>=0.2", "langchain-ollama>=0.2"]
 crewai = ["crewai>=0.80"]
@@ -21,3 +22,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["stack*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

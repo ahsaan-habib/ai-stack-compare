@@ -6,3 +6,4 @@ __pycache__/
 corpus/
 .chroma/
 results/*.csv
+.pytest_cache/
